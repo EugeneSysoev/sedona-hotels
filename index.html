@@ -2,13 +2,23 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Гостиницы Седоны</title>
+
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
     <header class="page-header">
       <nav>
         <a class="navigation-logo" href="index.html">
-          <img class="page-logo" src="#" alt="Логотип сайта гостиниц Седоны" />
+          <img
+            class="page-logo"
+            src="public/svg/logo.svg"
+            width="140"
+            height="70"
+            alt="Логотип сайта гостиниц Седоны"
+          />
         </a>
         <ul class="navigation-list" aria-label="Навигационное меню">
           <li class="navigation-item">
@@ -17,7 +27,7 @@
             >
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="about.html">О нас</a>
+            <a class="navigation-link" href="about.html">О Седоне</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="hotels.html">Гостиницы</a>
@@ -30,12 +40,26 @@
         >
           <li class="navigation-item">
             <button class="navigation-link search-trigger" type="button">
+              <img
+                class="header-icon"
+                src="public/svg/search.svg"
+                alt=""
+                width="20"
+                height="20"
+              />
               <span class="visually-hidden">Поиск</span>
             </button>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
-              <span class="visually-hidden">Избранное</span>
+              <img
+                class="header-icon"
+                src="public/svg/favorites.svg"
+                alt=""
+                width="20"
+                height="20"
+              />
+              <span class="visually-hidden">Иконка избранное</span>
             </a>
           </li>
           <li class="navigation-item">
@@ -53,8 +77,10 @@
           <h1 class="visually-hidden">Гостиницы Седоны</h1>
           <img
             class="page-logo"
-            src="#"
+            src="public/svg/welcome.svg"
             alt="Визуальный логотип сайта гостиниц Седоны"
+            width="458"
+            height="352"
           />
         </div>
 
@@ -72,37 +98,47 @@
       <section class="page-index-features">
         <h2 class="visually-hidden">5 причин посетить гостиницу Седона</h2>
         <ul class="features-list">
-          <li class="feature-item">
+          <li class="feature-item feature-item-blue">
             <h3>Настоящий городок</h3>
             <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </li>
+
           <li class="feature-item-image">
             <img
               class="feature-image"
-              src="#"
+              src="public/images/photo-1.jpg"
               alt="Фасад гостиницы в Седоне на фоне гор"
+              width="800"
+              height="385"
             />
           </li>
-          <li class="feature-item">
+
+          <li class="feature-item feature-item-white">
             <h3>Небольшая площадь</h3>
             <p>Все достопримечательности находятся очень близко</p>
           </li>
-          <li class="feature-item">
+
+          <li class="feature-item feature-item-lightblue">
             <h3>Красивая дорога</h3>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li class="feature-item">
+
+          <li class="feature-item feature-item-white">
             <h3>Мало туристов</h3>
             <p>Большинство едет в Гранд Каньон и толпится там</p>
           </li>
+
           <li class="feature-item-image">
             <img
               class="feature-image"
-              src="#"
+              src="public/images/photo-2.jpg"
               alt="Пейзаж с красными скалами в Седоне"
+              width="800"
+              height="385"
             />
           </li>
-          <li class="feature-item">
+
+          <li class="feature-item feature-item-blue">
             <h3>Там есть мост дьявола</h3>
             <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
           </li>
@@ -120,37 +156,37 @@
 
       <section>
         <ul class="features-list">
-          <li class="feature-item">
+          <li class="feature-item feature-item-white">
             <h3>Жилье</h3>
             <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
           </li>
-          <li class="feature-item">
+          <li class="feature-item feature-item-default">
             <h3>Еда</h3>
             <p>
               Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!
             </p>
           </li>
-          <li class="feature-item">
+          <li class="feature-item feature-item-white">
             <h3>Сувениры</h3>
             <p>Не только китайского, но и настоящего местного производства!</p>
           </li>
         </ul>
       </section>
 
-      <section class="description-container">
+      <section class="description-container-two">
         <h2 class="page-index-title">Заинтересовались?</h2>
         <p class="page-index-description">
           Укажите предполагаемые даты поездки,<br />и мы покажем вам лучшие
           предложения гостиниц в Седоне
         </p>
-        <div class="navigation-item">
+        <div class="navigation-item-search">
           <button class="navigation-link search-trigger" type="button">
             <span>Поиск гостиницы в Седоне</span>
           </button>
         </div>
       </section>
 
-      <section class="description-container">
+      <section class="description-container-three">
         <h2 class="page-index-title">Подпишитесь на рассылку</h2>
         <p class="page-index-description">
           Только полезная информация и никакого спама,<br />
@@ -165,10 +201,11 @@
             >Адрес электронной почты</label
           >
           <input
+            class="input-email"
             type="email"
             name="email"
             id="subscription-email"
-            placeholder="Ваш email"
+            placeholder="Ваш e-mail"
             required
           />
           <button type="submit">Подписаться</button>
@@ -182,17 +219,41 @@
         aria-label="Ссылки на социальные сети и телефон для связи"
       >
         <li class="page-footer-item">
-          <a class="page-footer-link" href="#">
+          <a class="page-footer-link" href="https://vk.com/htmlacademy">
+            <img
+              class="social-logo"
+              src="public/svg/VK.svg"
+              width="24"
+              height="14"
+              alt=""
+            />
             <span class="visually-hidden">Ссылка на Вконтакте</span>
           </a>
         </li>
         <li class="page-footer-item">
-          <a class="page-footer-link" href="#">
+          <a class="page-footer-link" href="https://t.me/htmlacademy">
+            <img
+              class="social-logo"
+              src="public/svg/telegram.svg"
+              width="18"
+              height="16"
+              alt=""
+            />
             <span class="visually-hidden">Ссылка на Телеграм</span>
           </a>
         </li>
         <li class="page-footer-item">
-          <a class="page-footer-link" href="#">
+          <a
+            class="page-footer-link"
+            href="https://www.youtube.com/user/HTMLAcademyru"
+          >
+            <img
+              class="social-logo"
+              src="public/svg/YouTube.svg"
+              width="22"
+              height="17"
+              alt=""
+            />
             <span class="visually-hidden">Ссылка на YouTube</span>
           </a>
         </li>
@@ -203,8 +264,15 @@
         </li>
       </ul>
 
-      <a class="htmlacademy-logo" href="#">
-        <img class="footer-logo" src="#" alt="Логотип платформы HTML Academy" />
+      <a class="htmlacademy-logo" href="https://htmlacademy.ru">
+        <img
+          class="footer-logo-academy"
+          src="public/svg/HTML Academy.svg"
+          alt=""
+          width="115"
+          height="33"
+        />
+        <span class="visually-hidden">Ссылка на HTML Academy</span>
       </a>
     </footer>
   </body>
