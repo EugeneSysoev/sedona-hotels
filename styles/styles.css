@@ -31,6 +31,8 @@
   --forms-elements-1: #e5e5e5;
   --forms-elements-2: #f2f2f2;
   --z-index-logo: 1035;
+  --z-index-link-current: 1050;
+  --z-index-modal: 1055;
 }
 
 @font-face {
@@ -166,7 +168,7 @@ body {
   text-decoration-color: #756257;
   text-underline-offset: 24px;
   text-decoration-thickness: 2px;
-  z-index: 1050;
+  z-index: var(--z-index-link-current);
 }
 
 .nav-right-margin {
@@ -186,7 +188,7 @@ body {
   position: relative;
   background-color: var(--background-basic-3);
   background-image: url("../public/images/index-background.jpg");
-  height: 485px;
+  min-height: 485px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -199,11 +201,11 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 57px;
+  height: 58px;
   background-image: url("../public/svg/divider.svg");
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: contain;
+  background-size: cover;
 }
 
 .description-container {
@@ -517,8 +519,10 @@ body {
 }
 
 .base-button-transparent:focus {
-  border: 3px solid var(--icons-second);
+  outline: 3px solid var(--icons-second);
+  outline-offset: -3px;
   color: var(--texts-background-deafault);
+  border-color: transparent;
 }
 
 .base-button-transparent:active {
@@ -670,6 +674,7 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: var(--texts-second);
+  cursor: pointer;
 }
 
 .catalog-sort:hover,
@@ -1391,6 +1396,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+  cursor: pointer;
 }
 
 .catalog-filter-input {
@@ -1471,7 +1477,7 @@ button {
   display: -ms-flexbox;
   display: flex;
   background-color: rgba(242, 242, 242, 0.8);
-  z-index: 1050;
+  z-index: var(--z-index-link-current);
 }
 
 .modal {
@@ -1492,7 +1498,7 @@ button {
   -webkit-box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
   background-color: var(--texts-background-deafault);
-  z-index: 1055;
+  z-index: var(--z-index-modal);
 }
 
 .modal-title {
@@ -1541,44 +1547,40 @@ button {
 
 .input-date {
   position: relative;
-  border: 0;
-  padding: 14px 20px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  border-radius: 4px;
+  display: block;
   width: 440px;
+  height: 50px;
+  padding: 12px 40px 12px 20px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 4px;
   background-color: var(--forms-elements-2);
-  padding-right: 40px;
   background-image: url("../public/svg/calendar.svg");
   background-repeat: no-repeat;
-  background-position: right 22px center;
-  background-size: 16px 22px;
-  font-family: var(--font-family);
+  background-position: right 20px center;
+  background-size: 16px 15px;
+  font-family: inherit;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   color: var(--texts-texts-basic);
-  opacity: 0.6;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
+}
+
+.input-date::placeholder {
+  opacity: 0.6;
 }
 
 .input-date::-webkit-calendar-picker-indicator {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  right: 0;
+  width: 50px;
   height: 100%;
-  margin: 0;
   padding: 0;
-  color: transparent;
-  background-color: transparent;
+  margin: 0;
+  opacity: 0;
   cursor: pointer;
-}
-
-.input-date:valid {
-  opacity: 1;
 }
 
 .input-date:hover {
@@ -1587,17 +1589,13 @@ button {
 
 .input-date:focus {
   outline: 3px solid var(--icons-second);
+  outline-offset: -3px;
   background-color: var(--buttons-disabled);
+  background-image: none;
 }
 
-.input-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.input-date::-webkit-inner-spin-button {
+  display: none;
 }
 
 .field-message {
@@ -1641,7 +1639,7 @@ button {
   grid-template-columns: 40px 1fr 40px;
   width: 110px;
   height: 48px;
-  background-color: #f2f2f2;
+  background-color: var(--forms-elements-2);
   border-radius: 4px;
   overflow: hidden;
 }
@@ -1983,6 +1981,10 @@ button {
   opacity: 0.3;
 }
 
+.label-text-from {
+  left: 106px;
+}
+
 .value-min {
   border-radius: 4px 0 0 4px;
 }
@@ -1992,7 +1994,7 @@ button {
 }
 
 .another-filter-group {
-  margin-left: 80.5px;
+  margin-left: 80px;
 }
 
 .count-indicator {
