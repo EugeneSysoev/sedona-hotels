@@ -1482,6 +1482,7 @@ button {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  position: relative;
   width: 717px;
   margin: auto;
   border-radius: 30px;
@@ -1492,10 +1493,6 @@ button {
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
   background-color: var(--texts-background-deafault);
   z-index: 1055;
-}
-
-.modal-basket {
-  position: relative;
 }
 
 .modal-title {
@@ -1604,7 +1601,7 @@ button {
 }
 
 .field-message {
-  margin: 4px 20px;
+  margin: 0 20px;
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
@@ -1779,7 +1776,7 @@ button {
   -ms-transform: translate(-50%, 15px);
   transform: translate(-50%, 15px);
   width: 256px;
-  padding: 15px 18px 18px 22px;
+  padding: 21px 18px 18px 22px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 10px;
@@ -1970,11 +1967,6 @@ button {
 
 .value-input:focus::placeholder {
   color: transparent;
-}
-
-.label-wrapper {
-  position: relative;
-  display: inline-block;
 }
 
 .label-text {
